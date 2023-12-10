@@ -40,7 +40,7 @@ def create_byweather_df(df):
     return byweather_df
 
 # load data
-df = pd.read_csv("https://raw.githubusercontent.com/rifzkiadiyaksa/Dicoding-Data-Analysis-with-Python/main/cleaned_day.csv")
+df = pd.read_csv("https://raw.githubusercontent.com/rifzkiadiyaksa/Data-Analysis-with-Python/main/cleaned_day.csv")
 df.reset_index(inplace=True)
 
 df["dateday"] = pd.to_datetime(df["dateday"])
@@ -50,7 +50,7 @@ min_date = df["dateday"].min()
 max_date = df["dateday"].max()
 
 with st.sidebar:
-    st.image("https://raw.githubusercontent.com/rifzkiadiyaksa/Dicoding-Data-Analysis-with-Python/main/dashboard/logo.png?raw=true")
+    st.image("https://raw.githubusercontent.com/rifzkiadiyaksa/Data-Analysis-with-Python/main/dashboard/Logo.png?raw=true")
 
     start_date, end_date = st.date_input(
         label="Time Range",
